@@ -79,6 +79,16 @@ async def serena(ctx):
     else:
         await ctx.send(" Non sono connesso a un canale vocale.") 
 
+@bot.command()
+async def clown(ctx):
+    voice_client = ctx.guild.voice_client
+    if voice_client and not voice_client.is_playing():
+        source = discord.FFmpegPCMAudio("mp3/Clown.mp3")
+        voice_client.play(source)
+        await ctx.send(" Sto riproducendo l'audio!")
+    else:
+        await ctx.send(" Non sono connesso a un canale vocale.") 
+
 if __name__ == "__main__":
     keep_alive()
     import time
