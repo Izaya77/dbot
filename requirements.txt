@@ -1,9 +1,3 @@
 discord.py
 flask
 PyNaCl
-torch
-numpy
-soundfile
-pydub
-ffmpeg-python
-TTS
